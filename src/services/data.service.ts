@@ -5,7 +5,8 @@ import { ClientProxy, Transport, ClientProxyFactory } from '@nestjs/microservice
 
 /*
 * @author : Praveen Kumar
-* @comment : Will call the Data microservice from here to fetch the records 
+  * @comment : host will be the name of container, so other container can communicate
+  * NOTE : both containers should be on same bridge if host is same. 
 * @date: 2020-04-26 17:17:46
 */
 @Injectable()
@@ -15,10 +16,15 @@ export class DataService {
      *
      */
     constructor() {
+        /*
+        * @author : Praveen Kumar
+        * @comment : Host 
+        * @date: 2020-05-03 13:01:28
+        */
         this.client = ClientProxyFactory.create({
             transport: Transport.TCP,
             options: {
-                host: '127.0.0.1',
+                host: 'dataservice',
                 port: 8100,
             },
         });

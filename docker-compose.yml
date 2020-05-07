@@ -1,0 +1,18 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    image: pbpraveen1988/webapp
+    ports:
+      - "3000:3000"
+    networks: 
+      - pbpraveen1988
+  dataservice:
+    build: .
+    image: pbpraveen1988/dataservice
+    ports:
+      - "8100:8100"
+    networks:
+      - pbpraveen1988
+networks: 
+  pbpraveen1988:
