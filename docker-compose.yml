@@ -1,7 +1,11 @@
 version: '3'
 services:
   webapp:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_VERSION=${NODE_VERSION}
     image: pbpraveen1988/webapp
     ports:
       - "3000:3000"
