@@ -1,4 +1,7 @@
-FROM node:12.14.1
+
+ARG NODE_VERSION
+
+FROM node:${NODE_VERSION}
 
 WORKDIR /Users/pbpraveenkumar/stack/MicroServices/WebApp
 
