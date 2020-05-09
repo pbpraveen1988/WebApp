@@ -22,15 +22,17 @@
   "dependencies": {
     "@nestjs/common": "^6.10.14",
     "@nestjs/core": "^6.10.14",
-    "@nestjs/microservices": "^6.5.3",
+    "@nestjs/microservices": "^6.11.11",
     "@nestjs/platform-express": "^6.10.14",
     "@nestjs/typeorm": "^6.2.0",
+    "mssql": "^6.2.0",
     "mysql": "^2.18.1",
     "pg": "^7.18.1",
     "postgres": "^1.0.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
+    "tedious": "^8.3.0",
     "typeorm": "^0.2.22"
   },
   "devDependencies": {
