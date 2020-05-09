@@ -11,6 +11,8 @@ services:
       - "3000:3000"
     networks: 
       - pbpraveen1988
+    depends_on:
+      - dataservice
   dataservice:
     build: .
     image: pbpraveen1988/dataservice
